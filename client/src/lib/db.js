@@ -1,3 +1,5 @@
+import { Pool } from 'pg';
+
 const pool = new Pool({
   user: process.env.POSTGRES_USER,
   password: process.env.POSTGRES_PASSWORD,
@@ -32,4 +34,4 @@ class Database {
 const dbInstance = new Database();
 Object.freeze(dbInstance); // Ensures singleton
 
-module.exports = dbInstance;
+export { pool, dbInstance };
