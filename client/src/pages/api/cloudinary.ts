@@ -1,8 +1,10 @@
+// /pages/api/cloudinary.ts
+
 import { MenuItemResponse } from './types';
 
 const CLOUDINARY_URL = `https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/q_auto,f_auto/`;
 
-export const getImagePath = (item: MenuItemResponse) => {
+export const getImagePath = (item: MenuItemResponse): string => {
   // If the item has a direct image_url (from website upload), use that
   if (item.image_url) {
     const type = item.type.toLowerCase();
@@ -17,8 +19,7 @@ export const getImagePath = (item: MenuItemResponse) => {
 
   // For test items
   if (item.name.toLowerCase().includes('test')) {
-    // For test items, get the exact public ID from Cloudinary Media Explorer
-    const publicId = item.type.toLowerCase() + 'test_item_with_no_space';
+    const publicId = type + 'test_item_with_no_space';
     console.log('Generated test item URL:', `${CLOUDINARY_URL}${publicId}`);
     return `${CLOUDINARY_URL}${publicId}`;
   }

@@ -1,9 +1,8 @@
 "use client";
 import React, { useState, useEffect } from 'react';
-import {Typography, Grid, Card, CardContent, Box, CardMedia } from '@mui/material';
+import { Typography, Grid, Card, CardContent, Box, CardMedia } from '@mui/material';
 import axios from 'axios';
 import { getImagePath } from '@/pages/api/cloudinary';
-import { MenuItem, MenuItemResponse, DrinkItem } from '@/pages/api/types';
 
 // interface MenuItemResponse {
 //   menu_item_id: number;
@@ -28,6 +27,28 @@ interface MenuItemProps {
 // interface DrinkItem extends MenuItemResponse {
 //   size?: string;
 // }
+
+export interface MenuItemResponse {
+  menu_item_id: number;
+  name: string;
+  price: number;
+  amount_available: number;
+  type: string;
+  is_favorite: boolean;
+  image_url?: string;
+}
+
+export interface MenuItem extends MenuItemResponse {
+  category?: string;
+  image?: string;
+  calories?: string;
+  prices?: { size: string; price: string; }[];
+  isFavorite?: boolean;
+}
+
+export interface DrinkItem extends MenuItemResponse {
+  size?: string;
+}
 
 const Menu_Board = () => {
   const [menuItems, setMenuItems] = useState<MenuItem[]>([]);
