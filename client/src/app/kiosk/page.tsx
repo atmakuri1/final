@@ -29,8 +29,8 @@ import {
   ShoppingCart,
   CheckCircle as CheckCircleIcon,
 } from '@mui/icons-material';
-import { commonStyles } from '@/theme/style';
-import { componentStyles } from '@/theme/componentStyle';
+import { commonStyles } from '../../theme/style';
+import { componentStyles } from '../../theme/componentStyle';
 import axios from 'axios';
 import TranslateIcon from '@mui/icons-material/Translate';
 import TextFieldsIcon from '@mui/icons-material/TextFields';

@@ -17,9 +17,7 @@ import {
   CardActions,
   Grid2,
 } from "@mui/material";
-import AccountCircle from "@mui/icons-material/AccountCircle";
-import Link from "next/link";
-import NavigationBar from "@/components/NavigationBar";
+import NavigationBar from '../../components/NavigationBar';
 import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
 import CheckIcon from "@mui/icons-material/Check";
 import axios from "axios";
