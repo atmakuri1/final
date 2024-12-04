@@ -1,8 +1,8 @@
 import { SxProps } from '@mui/material/styles';
-import { maxHeight } from '@mui/system';
 
+// Common styles used across the application
 export const commonStyles = {
-  // Layout
+  // Layout styles
   pageContainer: {
     minHeight: '100vh',
     bgcolor: 'background.default',
