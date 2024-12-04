@@ -1,6 +1,6 @@
 import { writeFile } from 'fs/promises';
 import { join } from 'path';
-import { pool } from '@/lib/db';
+import { pool } from "../../../../lib/db";
 
 export async function GET() {
     try {
