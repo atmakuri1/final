@@ -23,13 +23,12 @@ import {
   ShoppingCart,
   Delete
 } from '@mui/icons-material';
-import { commonStyles } from '@/theme/style';
-import { componentStyles } from '@/theme/componentStyle';
-import NavigationBar from '@/components/NavigationBar';
+import { commonStyles } from '../../theme/style';
+import { componentStyles } from '../../theme/componentStyle';
+import NavigationBar from '../../components/NavigationBar';
 import { useSession, getSession } from "next-auth/react";
-import { FirstTimeTrackingDialog } from '@/components/FirstTimeTrackingDialog';
-
-
+import { FirstTimeTrackingDialog } from '../../components/FirstTimeTrackingDialog';
+  
 interface Item {
   menu_item_id: number;
   price: number;
